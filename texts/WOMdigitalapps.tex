@@ -1,0 +1,395 @@
+\documentclass{article}
+% IMPORTANT: path to the figures folder!
+%\newcommand{\folder}{C:/Users/../../../figures}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fundamental packages %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{siunitx} 
+\sisetup{input-symbols = ()}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{extarrows}
+\usepackage[normalem]{ulem}
+\usepackage[USenglish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tgtermes}
+\usepackage{ragged2e}
+\usepackage{chngcntr}
+\usepackage{rotating}
+
+
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR} % datetime format can be changed, of course
+
+%%%%%%%%%%%%%%
+%% Geometry %%
+%%%%%%%%%%%%%%
+
+\newcommand{\linesperpagedesired}{35}
+\usepackage{pdflscape}
+\usepackage[left=3cm, top=2cm, right=2cm, bottom=2cm]{geometry}
+\linespread{1.5}
+\usepackage{changepage} % needed to make the margins of the Appendix page for additional figures a bit larger
+\usepackage{adjustbox}
+\usepackage{afterpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Sections, TOC and appendix %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\usepackage{titling}
+\usepackage[compact]{titlesec}
+\titleformat{\subsubsection}[runin]
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% if you want to change to spacing of the sections' titles use:
+%\titlespacing{\section}
+%{0pt}{ex}{4.5ex}
+
+\usepackage[titles]{tocloft}
+\renewcommand{\contentsname}{Table of contents}
+\renewcommand{\cftsecfont}{\normalfont\bfseries}% titles in bold
+\renewcommand{\cftsecpagefont}{\normalfont\bfseries}% page numbers in bold
+
+\usepackage[toc, page, title]{appendix}
+\renewcommand\appendixtocname{Appendix}
+\renewcommand\appendixpagename{Appendix}
+ \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%%%%%%%%%%%%
+%% Colors %%
+%%%%%%%%%%%%
+
+\usepackage{xcolor}
+
+\definecolor{UBonnBlue}{RGB}{0007,0082,0154}
+\definecolor{Occ-A}{HTML}{EB760A}
+\definecolor{Occ-B}{HTML}{43AA8D}
+\definecolor{Edu}{HTML}{F9C74F}
+\definecolor{Home}{HTML}{577590}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Figures and tables %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[labelfont=bf]{caption}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[edges]{forest}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,arrows.meta,calc,patterns}
+
+
+
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\setlength{\parindent}{0in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theorems and definition %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\newtheoremstyle{indented}
+  {3pt}% space before
+  {3pt}% space after
+  {\addtolength{\@totalleftmargin}{3.5em}
+   \addtolength{\linewidth}{-3.5em}
+   \parshape 1 1.5em \linewidth \itshape}% body font
+  {}% indent
+  {\bfseries}% header font
+  {.}% punctuation
+  {.5em}% after theorem header
+  {}% header specification (empty for default)
+\makeatother
+
+
+ {
+      \theoremstyle{indented}
+      \newtheorem{assumption}{Assumption}
+      \newtheorem{definition}{Definition}
+      \newtheorem{proposition}{Proposition}
+  }
+
+
+\numberwithin{equation}{section} % number equations within
+								 % section and subsection
+
+\newcommand\stab[1][0.45cm]{\hspace*{4.5 mm}} % tab needed for formulas in   												  % proof in appendix
+
+%%%%%%%%%
+%% URL %%
+%%%%%%%%%
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	linkcolor = black,
+	urlcolor = black,
+	citecolor = UBonnBlue,
+	}
+
+%%%%%%%%%%%%%%%%%%%
+%% Bibiliography %%
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+\renewcommand{\bibsection}{\section*{References}}
+%\DeclareLanguageMapping{english}{english-apa}
+%\setcounter{biburlnumpenalty}{85}
+%\addbibresource{bibliography.bib} % .bib file has to be in the same directory of this file
+\renewcommand{\UrlFont}{\small\ttfamily}
+
+
+
+\title{\textbf{Research Proposal} \\ Word-of-Mouth Communication in Digital Markets}
+\author{Iana Gerina \footnote{University of Vienna (VGSE),  \href{mailto:iana.gerina@univie.ac.at}{iana.gerina@univie.ac.at}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+%2-4 pages without bibliography
+
+\begin{center}
+    \textbf{Abstract}
+\end{center}
+
+
+\vspace{6ex}
+\textbf{Keywords}: Vertical differentiation, word-of-mouth communication, digital markets. 
+
+
+\clearpage
+\section{Introduction}
+
+In this research proposal I outline three projects, which are aimed at investigating the multi-faceted effects of the word-of-mouth communication on the digital markets outcomes, including product differentiation, market power and entry. This over-arching theme of the dissertation belongs to a wider branch of research on digital markets and WOM communication, and the motivation to study this particular topic is in its novelty and increasing applicability. Each year the amount of shopping online grows by 3-4\% in European countries, and the pandemic is pushing this number even higher.According to 2021 Europen E-Commerce Report, E-GDP of Europe has now reached 3.98\% of the total European GDP.  
+
+With many markets being driven by word-of-mouth and reputation, all digital markets will retain an additional aspect of information exchange due to them being a part of the world-wide web. The influence of word-of-mouth commmunication on market outcomes, as well as the ability of the producer to optimally intervene in it has been studied extensively \citep{Mayzlin2006, Godes2009}, however, much less attention has been given to marketplaces, which by themselves allow consumers to communicate directly with each other \citep{Godes2004} and, especially, the sellers. In my first two projects I focus mainly on software development markets, which are realised through special software development forums, where anybody can post their custom software and receive feedback, thus allowing communication of consumers not only between themselves or with sellers, but even directly with the producers of software. 
+
+The main advantage of and motivation for looking at this type of markets in particular is the fact that they combine specific features of digital apps markets, such as zero pricing and paying for access to good, instead of its quantity, with the aforementioned WOM communication aspects, complete with the possibility of being able to track those perfectly. Focusing on this type of markets then allows me to add new insights to the digital app markets literature by shedding light on the normally unobserved communication between consumers, as well as normally missing communication between them and the producer, adding a new dimension to the existing literature.
+
+The mechanisms behind digital apps markets functioning continue to be a highly topical issue. Digital markets, in general, presented researchers with a number of new market formations, such as digital platforms \citep{Just2018, Choi2021, Appel2020}. Explaining the often surprising market outcomes, e.g. prevalence of zero-price markets, coexistence of free and paid versions ("freemium"), transparency of product development despite it being a public good has long been a prevalent branch of literature \citep{Appel2020, Ajorlou2018}, as well as a vital tool for making informed policy decisions. The aim of my future dissertation is to provide additional insights into the workings of and conditions in these markets at the startup level, as well as the role of consumer-consumer and consumer-producer information exchange within them.
+
+In the second section of the research proposal I describe the first project, which focuses on the dual impact of WOM communication on the quality development decision of a start-up with an innovative idea. From the side of the demand delayed diffusion of information about the new good ensures that some consumers are being kept captive by the incumbent firm, influencing market compeition \citep{Fainmesser2020}, whereas from the side of supply newly attracted consumers provide additional feedback on the product's quality, making the costs of producing better quality product lower. On the other hand, due to the product's development transparency, all entering firms can emulate the incumbent's good entering level of quality without any additional costs. This trade-off, I argue, results in a dual effect from the WOM communication on the market outcomes. While the pricing of the incumbent is that of the monopolist due to the demand-side effects, supply-side effects promote the good's quality development.
+
+The ability of the producers to learn from their feedback is akin to the learning-by-doing effects \citet{Tirole}, as promoting higher demand in the first period results in more demand and thus, more feedback. In this way the project investigates the highly curious outcome of the digital app markets: quality development, despite the transparency and possibility of plagiarism; as well as highlighting an additional incentive to engage in zero pricing even in highly monopolised markets, adding to the standard explanation of zero marginal costs of production \citep{Ajorlou2018, Campbell2015}. In contrast to most classic learning-by-doing and knowledge spillovers literature \citep{Tirole,  Jovanovic1994}, I show that investment in quality is not hindered by learning-by-doing externality due to higher customer base effect (similar to \citet{Jovanovic1994}) and feedback effect.
+
+There are two main research question that I address in this project: how does the communication between consumers and producers in a digital marketplace influence the investment of firms in quality of their goods? What is the mechanism behind WOM communication's impact on market monopolisation? To better understand these effects, as well as to quantify their impact, I develop a structural model of price competition in a vertically differentiated market and use the web-scraped data from a software development forum to estimate its parameters. My intention is to disentangle the two effects from each other and provide a number of counterfactuals that illustrate the advantages and disadvantages of the current market equilibria in a number of "but-for" scenarios. 
+
+WOM communication as a driver for product quality has been examined in \citet{Godes2017}. The paper in question predicts a different optimal product-policy response to the growth in social interactions between consumers, depending on whether the structure of the network changes or if it only expands. Building on these results, I aim to investigate the impact of the combination of the feedback effect and the structure of WOM communication. Would a WOM communication network different from the one we observe in the data result in different product-policy decisions? 
+
+In the third section of the proposal I turn to the perspective of the entrant. Whereas it is true that in the short-run no entering firm can compete with the incumbent, in the long-run accumulating a big enough number of consumers an entrant can become the incumbent's competitor, instead of a price-taker. Setting up the second project I argue that this outcome occurs due to increasing returns to scale resulting from the feedback of consumers, as well as special forms of WOM communication networks, which result in market segmentation. 
+
+The idea that WOM communication is a driver behind new product's adoption was proven to be true by \citet{Hill2006}, who showed that being connected to somebody who has adopted the service makes a consumer 3-5 times more likely to adopt it herself. However, as I demonstrate in the first project, delayed information diffusion through WOM communication can lead to market monopolisation. The research question that I want to address with this project is: what is the underlying mechanism of succesful entry in digital markets with WOM communication? To investigate it I formulate a structural model that I will use to estimate the threshold number of consumers that a firm must attract for its entry to be successful in the long-run. Moreover, I examine how this threshold varies depending on the WOM network structure and provide counterfactuals to demonstrate that some types of WOM networks result in natural barriers to entry. 
+
+Finally, in the fourth section of the proposal I describe the third planned project, in which I propose to look into the means that the entrant can employ to overcome the delayed diffusion of information in the long-run, namely promoting WOM via setting a lower price or engaging in advertising auctions. I set up a simple model that explains the trade-off between those two options and illustrate using data how this decision is made. 
+
+%\textbf{Hypothesis:} The market consists of a small number of dominant firms, who have market power, as well as a large number of fringe firms, who are price-takers. This market outcome is due to WOM being doubly advantageous to the dominant firms and restricting the growth of fringe firms, thus resulting in natural barriers to entry. However, due to software development process being transparent to everybody, it also results in higher levels of investment in quality, as long as the market is not completely disjointed.
+
+%However, in contrast to earlier literature I argue that in such markets, where WOM is present, marginal costs of production are not only non-zero, but also negative and decreasing in the number of consumers. In combination with WOM effects on demand, I explain how these characteristics result in the  outcomes I observe in such markets. Moreover, I investigate the properties of the WOM network in software development forums and describe their role in the process of market monopolisation, as well as quality development.
+
+
+%My aim is to empirically disentangle the two effects on the market outcomes: the WOM communication leading to captive consumers and the effect of feedback on quality development resulting in reduction of costs of production for the entrant. By estimating a structural model I hope to investigate the following counterfactuals: 
+
+%\begin{enumerate}
+ %   \item "but for" feedback effect, would the incumbent still be interested in increasing the quality production? 
+  %  \item would different structures of WOM communication network result in different market outcomes, e.g. less monopolisation of the market or lower quality investment?
+%\end{enumerate}
+
+\setcounter{tocdepth}{2}
+\addtocounter{page}{-1}
+
+
+\section{WOM and vertical differentiation in software development markets}
+
+
+\subsection{Fundamentals of the Model} \label{model}
+ 
+ In this section I set up a simple two-period game between incumbent and K entering fringe firms and explain the main testable implications of this model.
+
+\textbf{Supply}:
+There is K+1 firms producing vertically differentiated goods following  \citet{Tirole}. However, only one firm is an active player, the incumbent. There is a base quality $s_0$, which is inherent to any innovative, working good. To increase the quality above that the incumbent can engage in costly quality production, which is a function of invested hours of work: $s=\sqrt{h}$, intuitively limiting $h \in [0,\inf)$. Moreover, the quality accumulates over periods, i.e. $s_{t+1}=s_{t}+\Delta s$. 
+
+The cost of producing quality is decreasing in the number of consumers the product was sold to in the previous period. As the incumbent introduces an innovative product, there is no feedback effect in the first period and her costs are simply $c_1= wh_1$, where $h_1$ is the number of hours the incumbent allocates to the production of the good's quality and $w$ is the wage of an exogenous work opportunity (e.g. office job). After the first period, however, the incumbent's cost is: $c_2= (w-\alpha d_1)h_2$, where $d_1$ is the demand for incumbent's good in the first period and $0\leq \alpha \leq w$. Note that the marginal cost of producing a unit of good is 0, similar to other papers in the literature \citep{Ajorlou2018}. 
+
+Whereas the incumbent is free to choose her hours of work and prices, the entering firms are not active players.  They are forced to set price 0 and enter the market in the second period with a good of the same quality as the incumbent has offered in a period before (i.e. there is full transparency of software development). 
+
+\textbf{Demand}: 
+Consumers derive utility from the quality of the product. Thus, consumer $j$'s utility: $u_j = \theta_j(s_t) - p_t$, where $\theta_j$ - quality preference parameter is drawn from $U[0,1]$ and $j\in{1,..,N+1}$. The outside option has a value of 0, thus, the participation constraint is $p_t\leq (s_t) \theta_j$. 
+%The marginal consumer $\hat{j}$ is indifferent between the goods of the entrants and the incumbent, so $(s+s_0) \theta_{\hat{j}} - p = s_{i^{-inc}} \theta_{\hat{j}} - p_{i^{-inc}}$. 
+
+%Integrating over these conditions I derive that the demand for entrant's good by consumer $j$ is: $\tfrac{ps^e - p_es}{s^e(s-s^e)}$, and the demand for the incumbent's good: $ 1 - \tfrac{p - p^e}{s - s^e}$. 
+
+All consumers on the market are connected through social network described by a random graph (N+1, $\Xi$), depicted on Figure \ref{network}. The baseline assumptions on the network are simplistic: the corresponding graph is a tree (e.g. each two vertices connected by exactly one path), where one vertex is connected to $N$ others, and there is no other edges. Intuitively, $N$ corresponds to the degree of the consumer 0's vertex in the graph. 
+
+\textbf{Structure of the game:}
+The game occurs in two periods. Initially no consumers are informed about the producers' goods. In \textbf{$t=1$} incumbent enters the market and sets the price $p_1$ and the amount of invested hours, resulting in a quality of the good $s = s_0+s_1$. Then consumer 0 becomes informed about the incumbent's good, it's price and quality, and buys the good or chooses an outside option. The incumbent perceives the choice of the consumer, but does not learn from it any information about consumer 0. Depending on the choice of the consumer 0 two different states occur in $t=1$. In state $\gamma=0$, the incumbent's good was not bought and she needs to try and enter the market again. In state $\gamma=1$, the good was bought and $N$ consumers connected to the incumbent became informed about the good's existence and, once they are set, its price and quality. 
+
+In \textbf{$t=2$}, $K$ fringe firms enter the market simultaneously and are, again, only known by one consumer: consumer $0_2$, who is not necessarily the same consumer. Knowing the state she is in, the incumbent sets price $p_2$ and quality $s_2$, simultaneously with the entering firms. As marginal cost is 0, they are forced to set the price to 0. Note that in state 0 the entering firms are only competing with the incumbent over consumer 0. In state $\gamma=1$ $N$ consumers, who were informed by incumbent by consumer 0, are not informed about the entrants, and are captive to the incumbent.
+
+
+
+
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+	\node[circle,draw] (c) at ((8.8, 5.3){0};
+	%\draw (8.8, 5.1) circle (0.1cm) node[anchor=south] {0};
+ 	\draw (8.74, 5.0) -- (3.8, 0);
+	\node[circle,draw] (c) at ((3.8, -0.3){1};
+	%\draw (3.8, -0.1) circle (0.1cm)  node[anchor=north] {1};
+ 	\draw (8.77, 5.0) -- (5.8, 0);
+	%\draw (5.8, -0.1) circle (0.1cm) node[anchor=north] {2};
+	\node[circle,draw] (c) at ((5.8, -0.3){2};
+ 	\draw (8.88, 5.00) -- (13.8, 0);
+	\node[circle,draw] (c) at ((13.8, -0.35){N};
+	%\draw (13.8, -0.1) circle (0.1cm)  node[anchor=north] {N};
+   	\draw (8.3, -1pt) -- (8.3, 1pt) ;
+   	\draw (9.3, -1pt) -- (9.3, 1pt) ;
+   	\draw (10.3, -1pt) -- (10.3, 1pt); 
+\end{tikzpicture}
+\caption{Consumer network}
+\label{network}
+\end{figure}
+
+\subsection{Equilibria and intuition behind results}
+
+The assumption on the market structure is largely supported by the empirical data: in both forums I observe the majority of markets are such that there is only one dominant firm, who has market power, and K fringe firms who are price-takers. 
+
+In setting up the structural model I aim to investigate first and foremost two separate effects, which reflect the WOM influence on the market. Not unlike learning-by-doing effects in \citet{Tirole}, I assume that investments in quality become less costly with the number of attracted consumers. This reflects one of the main features of software development markets, as the product is often discussed openly among developers, who are likely to report 'bugs' directly to the producer. The parameter $\alpha$ corresponds to such an effect. 
+ 
+Secondly, I aim interested in the effect of delayed diffusion of information about goods on the market outcomes. In the baseline model I first look at the effect of the variable $N$, which corresponds to the number of consumers that were informed after the first period. In the extensions I add a number of dimensions to this variable, aiming to investigate the more complex effects of WOM communication networks.
+
+There are two possible states in period 2, which I am going to describe in more detail. In state 0 the incumbent faces the residual demand $1-\tfrac{Kp_2}{\Delta s}$, where $\Delta s = s_2-s$. While it is a dominant firm in this state, it is not a monopolist and it has failed to reach a bigger customer base and lost its delayed information diffusion advantage. The only advantage the incumbent has now, which allows her to be the dominant firm, but not a monopolist.   In state 1 she has attracted $N$ new consumers, who are unaware of the entrants' existence, and so the demand for her good is  $N(1-\tfrac{p_2}{\Delta s})$, where in the baseline case I assume that the first-period product is no longer available to the consumers. Since these $N$ consumers are not aware of the entrant, the incumbent is able to set a non-zero price and gain profit.
+
+
+Starting from \textbf{second period} I define the maximisation problems of the incumbent. 
+Assuming that the incumbent does not keep the unsuccessful product available to the consumers, \textbf{in state 0} her maximisation problem can be written as:
+
+$$\pi_2 = p_2(1-\tfrac{Kp_2}{\Delta s}) - w\Delta s^2$$
+
+The equilibrium price and quality are then:
+
+$$p_2^* = \tfrac{1}{16wK^2}$$
+$$\Delta s^* = \tfrac{1}{8wK}$$
+
+Hence, her profit in this state is: $\pi^*_2 = \tfrac{2K^2-1}{64wK^4}$.
+
+In \textbf{state 1} incumbent is again a monopolist for $N$ new consumers. Her maximisation problem is:
+
+$$\pi_2 = Np_2(1-\tfrac{p_2 - p_1}{s+\Delta s}) - (w-\alpha)\Delta s^2$$
+
+The equilibrium is then:
+
+$$p_2^* = \tfrac{N}{16(w-\alpha) + \tfrac{s}{2}}$$
+$$\Delta s^* = \tfrac{N}{8(w-\alpha)}$$
+
+The profit in this state is then equal to:
+$$\pi = \tfrac{N^2}{64(w-\alpha)}+ \tfrac{s}{4}$$
+
+Using these results I set up the maximisation problem in the first period:
+
+$$\pi_1 = (1-\tfrac{p_1}{s_1+s_0})p_1 - w(s_1)^2+\beta ((1-\tfrac{p_1}{s_1+s_0})(\tfrac{N^2}{64(w-\alpha)}+ \tfrac{s}{4})+\tfrac{p_1}{s_1+s_0}\tfrac{2K^2-1}{64wK^4})$$
+
+Using Kuhn-Tucker conditions I show that the corner solutions for price of this problem, which I am most interested in, occur when:
+
+$$N \leq  \sqrt{2\beta - \tfrac{2\alpha\beta}{w}- \tfrac{2}{K^2}+ \tfrac{1}{K^4} }$$
+
+(Needs to be checked)
+
+
+
+\subsection{Testable Implications}
+
+\textbf{Available Data:} initial and current price of product ($p_2$), developer's rank when first posting ($w$) and when last updated ($w-\alpha$), number of mentions in external threads ($N$), response rate on bugs in GitHub ($\Delta s$), competitors ($K$).
+
+First period quality - missing (!).
+(Here will be a chunk of text describing data and its extraction).
+
+From the description of equilibria in each state in the second period it is possible to disentangle which incumbent firms are keeping consumers captive and which are competing with fringe firms, having not entered the market successfully. For the first set the variable $K$ will be significant, whereas for the second it will not be.
+
+\textbf{Part 1:} once I have a set of firms, who have successfully entered the market, I can perform either a logarithmic OLS with an equation of the form:
+
+$$ln(\Delta s) = a_1 + a_2ln(N) + a_3ln(w) +a_4(\tfrac{\alpha}{w}) +\epsilon$$ 
+
+or use a non-linear OLS. If $a_3>0$, but $a_4<0$, this would support the results of the model. The sensitivity of results can be checked by using the data from two different software developer forums, as well as by introducing a number of fixed parameters. 
+
+Event study specification!
+
+\textbf{Part 2:} checking for market power of the incumbent: how?
+
+\textbf{Part 3:} using the restrictions on the exogeneous parameters from the first period model I can compare how the model performs in the simulations with different $\beta$ values to the parameters (mainly, $N$) that I observe. I compare these results with the simulations for a model with no feedback effects and show which ones are closer to the real value of N.
+
+
+\subsection{Counterfactuals}
+\begin{itemize}
+    \item various WOM network properties:
+    compare the WOMs of the two forums and simulate different structures;
+    \item demand shock: 
+    model the counterfactual and check how the results compare from the effects from the Google Play Store paid app restrictions towards Russian users;
+    \item supply shock: 
+    model the counterfactuals and check how the results coincide with the effects from influx of members to PDA Forums after sanctions on Google Play Store on the side of developers;
+    \item shock of feedback effect (blockage of GitHub for Russian software developers): compare the predictions of the model against the real impact.
+\end{itemize}
+%\section{Conclusion}
+
+\subsection{Extensions}
+
+\subsubsection{Incumbent Offers a Menu:}
+
+instead of disallowing access of new consumers to her first period good, incumbent offers it as an alternative to the second period version for consumer 0. In \textbf{state 1} her maximisation problem is:
+
+$$\pi_2 = Np_2(1-\tfrac{p_2-p_1}{\Delta s}) - (w-\alpha)\Delta s^2 + p_1(\tfrac{p_2s_1-p_1s_2}{s_1\Delta s})$$
+
+After taking the derivative, it becomes possible to formulate the solution in terms of $p_2$ and $\Delta s$, instead of two separate qualities. Unfortunately, due to market sizes being different, the FOC for equilibrium quality is described with a third degree polynomial:
+
+$$\tfrac{N}{4} + \tfrac{(1+N)p_1}{2\Delta s} - \tfrac{p_1^{2inc}(1-N)^2}{4N\Delta s^2} - 2 \Delta s (w-\alpha)=0$$
+
+While there is only one real solution to this equation, it is not very informative. Interestingly, however, it collapses to that of the baseline model, if $p_1 = 0$. 
+
+
+\subsubsection{Various Networks:} instead of treating N as an exogeneous variable like in the baseline model, I now investigate the repercussions of different network formation assumptions on the model results.
+
+\begin{itemize}
+    \item the probability of recommending a good after buying is not 1, but a function of the goods quality or price.
+    
+    It may happen that people in general are more likely to talk about the good if it's cheap, or if the quality is high, or if they perceive the price to be low for this level of quality (i.e. reacting to quality-to-price ratio). Moreover, if experts in general are more likely to recommend the good, then targeting consumers with high valuation of quality by producing high quality good with lower prices may compensate the incumbent's investment in the quality. development.
+    
+    (not sure how to implement it and if it's needed)
+    
+    Empirics: introduce an instrument for N.
+    
+    \item homophily or heterophily of networks.
+    
+    In real-world networks homophily is generally more widespread, meaning people are more likely to be friends with similar people. In the model I assumed that the N consumers brought by the consumer 0 have a uniform valuation of the quality of good. However, it may be true that being somebody who appreciates quality of the software highly, consumer 0 is more likely to bring more consumers like herself, whose valuation for quality is also high.
+    
+    In contrast, heterophily of the network may occur, for example, if consumers who value quality are more likely to post reviews on the forum, which will be read by novices, who are less likely to be interested in more in-depth discussions of specific software and do not value the quality so much.
+    
+    Assume that consumers are divided into two types in their communication. High-type consumers value quality more than average: $\theta_h\geq 0.5$, whereas low type consumers do not value it so much. $\theta_l < 0.5$.  It is evident that if the producer is aware of the underlying properties of the network, e.g. homophily or heterophily, she can use that information to price discriminate second period consumers.  
+	\item clustering of consumers.
+M consumers in the first period forming clusters.
+\end{itemize}
+
+
+
+\newpage
+\bibliography{bibliography}
+
+\end{document}
