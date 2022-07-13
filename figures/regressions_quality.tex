@@ -1,0 +1,34 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{2}{c}}
+\hline\hline
+            &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}\\
+            &\multicolumn{1}{c}{rate\_rep}&\multicolumn{1}{c}{response\_rate}\\
+\hline
+0.men\_th#c.demand\_category&           0         &           0         \\
+            &         (.)         &         (.)         \\
+[1em]
+1.men\_th#c.demand\_category&     0.00613\sym{***}&      0.0115\sym{**} \\
+            &   (0.00196)         &   (0.00530)         \\
+[1em]
+demand\_category&     0.00587\sym{*}  &     -0.0251\sym{***}\\
+            &   (0.00351)         &   (0.00950)         \\
+[1em]
+dev\_hier    &      0.0109\sym{***}&      0.0251\sym{***}\\
+            &   (0.00285)         &   (0.00771)         \\
+[1em]
+m\_corr      &     -0.0138\sym{**} &     -0.0351\sym{**} \\
+            &   (0.00622)         &    (0.0168)         \\
+[1em]
+gh\_page     &      0.0130\sym{**} &      0.0175         \\
+            &   (0.00634)         &    (0.0172)         \\
+[1em]
+\_cons      &     -0.0312\sym{***}&      0.0623\sym{**} \\
+            &    (0.0116)         &    (0.0313)         \\
+\hline
+\(N\)       &        1401         &        1401         \\
+\hline\hline
+\multicolumn{3}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{3}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}
